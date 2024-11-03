@@ -33,6 +33,13 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      'react/prop-types': 'off', // Turn off prop-types rule
+      'react/react-in-jsx-scope': 'off', // Disable React in scope rule
     },
+
+
+
+
   },
 ]
+
