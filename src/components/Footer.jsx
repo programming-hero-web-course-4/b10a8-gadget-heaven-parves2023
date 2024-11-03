@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
 
         <div className="space-y-2">
-          <h3 className="text-lg font-bold">Services</h3>
+          <h3 className="text-lg font-bold">Company</h3>
           <ul className="space-y-1 text-gray-600">
             <li>Product Support</li>
             <li>Order Tracking</li>
@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
 
         <div className="space-y-2">
-          <h3 className="text-lg font-bold">Services</h3>
+          <h3 className="text-lg font-bold">Legal</h3>
           <ul className="space-y-1 text-gray-600">
             <li>Product Support</li>
             <li>Order Tracking</li>
