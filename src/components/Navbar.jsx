@@ -1,16 +1,22 @@
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
+import { BsCart3 } from "react-icons/bs";
+import { FaRegHeart } from "react-icons/fa";
+
+
 
 const Navbar = () => {
+
+  
   const links = (
     <>
       <li>
-        <NavLink to="/item1">Item 1</NavLink>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/item2">Item 2</NavLink>
+        <NavLink to="/Statistics">Statistics</NavLink>
       </li>
       <li>
-        <NavLink to="/item3">Item 3</NavLink>
+        <NavLink to="/Dashboard">Dashboard</NavLink>
       </li>
     </>
   );
@@ -43,13 +49,19 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl">Gadget Heaven</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end gap-4">
+          <div className="bg-white rounded-full text-gray-950 size-8 flex justify-center items-center">
+          <Link ><BsCart3  /></Link>
+          </div>
+          <div className="bg-white rounded-full text-gray-950 size-8 flex justify-center items-center">
+          <Link ><FaRegHeart /></Link>
+          </div>
+          
         </div>
       </div>
     </div>

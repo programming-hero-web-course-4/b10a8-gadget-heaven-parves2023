@@ -16,7 +16,12 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
+.active{
+  font-weight: 700;
+  background-color: transparent !important;
+  text-decoration: underline;
+  color: white !important;
+}
 
