@@ -16,11 +16,11 @@ body {
 #root {
   margin: 0 auto;
 }
-
+/* 
 .active{
-  font-weight: 700;
+  font-weight: 800;
   background-color: transparent !important;
   text-decoration: underline;
-  color: white !important;
-}
+  color: rgb(162, 162, 162) !important;
+} */
 

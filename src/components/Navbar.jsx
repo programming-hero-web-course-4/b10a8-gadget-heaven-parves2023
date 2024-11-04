@@ -5,9 +5,8 @@ import { FaRegHeart } from "react-icons/fa";
 const Navbar = () => {
   const location = useLocation();
 
-  // Check if the current route is a product details page
   const isProductDetailsPage =
-    location.pathname.startsWith("/product-details/");
+  location.pathname.startsWith("/product-details/") || location.pathname === '/Dashboard'|| location.pathname === '/Statistics';
 
   const links = (
     <>

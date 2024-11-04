@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useOutletContext, useParams } from 'react-router-dom';
 import { useEffect, useState } from "react";
 
 import { BsCart3 } from "react-icons/bs";
@@ -8,6 +8,16 @@ import { FaRegHeart } from "react-icons/fa";
 function ProductDetails() {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
+
+  const { addToCart,handleAddToWishList } = useOutletContext();
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+  };
+
+
+
+
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -44,7 +54,7 @@ function ProductDetails() {
       </div>
 
       {/* Product Details Card */}
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col lg:flex-row w-8/12 absolute -bottom-[21rem] left-1/2 transform -translate-x-1/2">
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col lg:flex-row w-8/12 absolute -bottom-[21rem] left-1/2 transform -translate-x-1/2 p-3">
         <figure className="lg:w-1/2">
           <img
             src={product.product_image}
@@ -61,7 +71,7 @@ function ProductDetails() {
           </p>
           <p
             className={`text-lg font-medium ${
-              product.availability ? "text-green-600" : "text-red-600"
+              product.availability ? "text-green-600 bg-green-100 rounded-xl border border-green-300 w-28 pl-4 px-5" : "text-red-600"
             }`}
           >
             {product.availability ? "In Stock" : "Out of Stock"}
@@ -102,12 +112,15 @@ function ProductDetails() {
 
 
     <div className="flex space-x-4 mt-4"> {/* Flex container for buttons */}
-      <button className="btn bg-[#9538E2] text-white">Add to Cart <BsCart3 className="size-6"></BsCart3></button>
-      <button className="btn bg-gray-200 text-gray-800 rounded-full"><FaRegHeart className="rounded-full"></FaRegHeart></button>
+      <button onClick={()=> handleAddToCart(product)} className="btn bg-[#9538E2] text-white">Add to Cart <BsCart3 className="size-6"></BsCart3></button>
+      <button onClick={()=> handleAddToWishList(product)} className="btn bg-gray-200 text-gray-800 rounded-full"><FaRegHeart className="rounded-full"></FaRegHeart></button>
     </div>
 
         </div>
+
       </div>
+
+      
     </div>
     </div>
   );
