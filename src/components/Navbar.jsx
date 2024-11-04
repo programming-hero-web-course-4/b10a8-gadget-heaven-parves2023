@@ -9,7 +9,7 @@ const Navbar = ({cart}) => {
   const location = useLocation();
 
   const isProductDetailsPage =
-  location.pathname.startsWith("/product-details/") || location.pathname === '/Dashboard'|| location.pathname === '/Statistics';
+  location.pathname.startsWith("/product-details/") || location.pathname === '/Dashboard'|| location.pathname === '/Statistics' || location.pathname === '/FAQ' || location.pathname === '/Contact';
 
   const links = (
     <>
@@ -21,6 +21,12 @@ const Navbar = ({cart}) => {
       </li>
       <li>
         <NavLink to="/Dashboard">Dashboard</NavLink>
+      </li>
+      <li>
+        <NavLink to="/FAQ">FAQ</NavLink>
+      </li>
+      <li>
+        <NavLink to="/Contact">Contact</NavLink>
       </li>
     </>
   );

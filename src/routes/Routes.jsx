@@ -5,6 +5,8 @@ import ProductDetails from '../pages/ProductDetails';
 import NotFound from '../components/NotFound';
 import Dashboard from '../pages/Dashboard';
 import Statistics from '../pages/Statistics';
+import FAQPage from '../pages/FAQPage';
+import Contact from '../pages/Contact';
 
 const routes = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const routes = createBrowserRouter([
       {
         path: "/statistics",
         element: <Statistics />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/FAQ",
+        element: <FAQPage />,
       },
 
 
