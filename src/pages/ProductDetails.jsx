@@ -57,7 +57,7 @@ function ProductDetails() {
        <Helmet>
         <title>Gadgets | {pathnameWithoutSlash} </title>
       </Helmet>
-      <div className="container mx-auto p-6 space-y-8 relative mb-[30rem]">
+      <div className="container mx-auto p-6 space-y-8 relative md:mb-[30rem] mb-[50rem]">
         {/* Header Section */}
         <div className=" text-white py-8 pb-44 text-center rounded-lg">
           <h1 className="text-3xl font-bold">Product Details</h1>
@@ -69,7 +69,7 @@ function ProductDetails() {
         </div>
 
         {/* Product Details Card */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col lg:flex-row w-8/12 absolute -bottom-[21rem] left-1/2 transform -translate-x-1/2 p-3">
+        <div className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col lg:flex-row md:w-8/12 w-full  absolute md:-bottom-[21rem] -bottom-[40rem] left-1/2 transform -translate-x-1/2 p-3">
           <figure className="lg:w-1/2">
             <img
               src={product.product_image}

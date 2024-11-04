@@ -100,9 +100,9 @@ function Dashboard() {
 
       <div className="container mx-auto my-5">
         {/* Cart Summary */}
-        {cartActive && <div className="flex justify-between">
+        {cartActive && <div className="flex justify-between flex-col text-center md:flex-row">
           <h1 className="text-2xl font-semibold">Cart {cart.length}</h1>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 flex-col md:flex-row">
             <h1 className="text-2xl font-semibold">Total Cost : {totalCost}</h1>
 
             <button onClick={sortByPrice} className="btn btn-outline border-2 border-[#9538E2]">
@@ -169,7 +169,7 @@ function Dashboard() {
             <h1 className="text-lg font-semibold">Price: ${item.price}</h1>
           </div>
         </div>
-        <div className="absolute right-0 top-10 flex gap-2 items-center">
+        <div className="absolute right-0 top-10 flex flex-col md:flex-row gap-2 items-center">
           {/* Add to Cart from Wishlist */}
           <button
             className="btn bg-[#9538E2] text-white p-2 rounded"

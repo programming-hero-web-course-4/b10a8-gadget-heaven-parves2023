@@ -8,7 +8,7 @@ const Footer = () => {
       </div>
       <hr />
       {/* footer links */}
-      <div className="flex gap-7 justify-evenly my-10">
+      <div className="flex md:flex-row flex-col gap-7 justify-evenly my-10">
         <div className="space-y-2">
           <h3 className="text-lg font-bold">Services</h3>
           <ul className="space-y-1 text-gray-600">

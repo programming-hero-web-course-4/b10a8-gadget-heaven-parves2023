@@ -36,7 +36,7 @@ function Cards() {
       </h1>
       <div className="grid grid-cols-12 gap-3">
         {/* Category Buttons */}
-        <div className="col-span-2 border rounded-xl bg-white py-3 px-1 space-y-2">
+        <div className="col-span-4 md:col-span-2 border rounded-xl bg-white py-3 px-1 space-y-2">
           <Link 
             to="/" 
             onClick={() => setSelectedCategory('All')}
@@ -57,7 +57,7 @@ function Cards() {
         </div>
 
         {/* Cards */}
-        <div className="col-span-10 grid grid-cols-3 gap-3">
+        <div className="md:col-span-10 col-span-8 grid md:grid-cols-3 grid-cols-1 gap-3">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
               <Card key={product.product_id} product={product} />
