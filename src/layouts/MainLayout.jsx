@@ -12,7 +12,7 @@ const MainLayout = () => {
 
 
   const addToCart = (product) => {
-    const itemExists = cart.some((item) => parseInt(item.product_id) === parseInt(product.product_id));
+    // const itemExists = cart.some((item) => parseInt(item.product_id) === parseInt(product.product_id));
     const itemOnWishlist = wishList.some((item) => parseInt(item.product_id) === parseInt(product.product_id));
   
 
@@ -21,8 +21,6 @@ const MainLayout = () => {
   
     if (newTotalPrice > 1000) {
       toast.error("Total cart value cannot exceed $1000!", { autoClose: 1000 });
-    } else if (itemExists) {
-      toast.error("Item is already in the cart!", { autoClose: 1000 }); 
     } else if (itemOnWishlist) {
       toast.warn("Item removed from the WishList!", { autoClose: 1000 });
       setWishList((prevWishList) => prevWishList.filter((list) => list.product_id !== product.product_id));
@@ -62,7 +60,7 @@ const MainLayout = () => {
   return (
     <div>
       <ToastContainer />
-      <Navbar />
+      <Navbar cart={cart} />
       <Outlet context={{ cart, setCart, addToCart, handleAddToWishList, wishList, setWishList, removeFromWishList }} />
       <Footer />
     </div>

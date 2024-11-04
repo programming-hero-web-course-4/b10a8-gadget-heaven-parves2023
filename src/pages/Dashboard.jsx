@@ -5,12 +5,15 @@ import { toast } from 'react-toastify';
 import doneImg from "../assets/Group.png";
 import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
+import { GiSettingsKnobs } from "react-icons/gi";
+import { useNavigate } from 'react-router-dom';
 
 function Dashboard() {
-  const { cart, setCart, wishList,addToCart,removeFromWishList } = useOutletContext();
+  const { cart, setCart,setWishList, wishList,addToCart,removeFromWishList } = useOutletContext();
   const [sortedCart, setSortedCart] = useState(cart);
   const [totalCost, setTotalCost] = useState(0);
   const modalRef = useRef(null);
+  const [ifMoreThenZero , setifMoreThenZero] = useState(!false)
 
   const location = useLocation();
   const pathnameWithoutSlash = location.pathname.startsWith('/') ? location.pathname.slice(1) : location.pathname;
@@ -20,16 +23,28 @@ function Dashboard() {
 
   useEffect(() => {
     const cost = cart.reduce((acc, item) => acc + item.price, 0);
+
+    cost ? setifMoreThenZero(!true) : setifMoreThenZero(!false);
+
     setTotalCost(cost);
     setSortedCart(cart);
   }, [cart]);
 
   const removeFromCart = (id) => {
-    const updatedCart = sortedCart.filter((item) => item.product_id !== id);
+    let itemRemoved = false;
+    const updatedCart = sortedCart.filter((item) => {
+      if (!itemRemoved && item.product_id === id) {
+        itemRemoved = true;
+        return false;
+      }
+      return true;
+    });
+  
     setCart(updatedCart);
     setSortedCart(updatedCart);
     toast.warn("Item removed from cart!", { autoClose: 1000 });
   };
+  
   
 
   const sortByPrice = () => {
@@ -42,6 +57,15 @@ function Dashboard() {
       modalRef.current.showModal();
     }
   };
+  const navigate = useNavigate();
+
+  const closeHandler = () => {
+    setCart([]);
+    setWishList([]);
+    modalRef.current.close();
+    navigate('/');
+  };
+  
 
   return (
     <div>
@@ -80,12 +104,14 @@ function Dashboard() {
           <h1 className="text-2xl font-semibold">Cart {cart.length}</h1>
           <div className="flex items-center gap-5">
             <h1 className="text-2xl font-semibold">Total Cost : {totalCost}</h1>
-            <button onClick={sortByPrice} className="btn btn-secondary">
-              Sort by price
+
+            <button onClick={sortByPrice} className="btn btn-outline border-2 border-[#9538E2]">
+              Sort by price <GiSettingsKnobs className="text-[#9538E2] size-5" />
             </button>
-            <button onClick={showModal} className="btn btn-primary">
+            <button disabled={ifMoreThenZero} onClick={showModal} className="btn bg-[#9538E2] text-cyan-50">
               Purchase
             </button>
+
           </div>
         </div>}
 
@@ -168,21 +194,23 @@ function Dashboard() {
 
         {/* Modal */}
         <dialog ref={modalRef} className="modal">
-          <div className="modal-box flex justify-center items-center flex-col gap-3">
-            <img src={doneImg} alt="" />
+          <div className="modal-box flex justify-center items-center flex-col gap-3 text-center">
+            <img src={doneImg} alt="asdf" />
             <h3 className="font-bold text-lg">Payment Successfully!</h3>
-            <p className="py-4">
+            <p className="py-4 text-2xl font-bold">
               Thanks for purchasing.
               <br />
               Total: {totalCost}
             </p>
-            <div className="modal-action w-full text-center">
+            <div className="modal-action w-full text-center items-center">
+
               <button
                 className="btn w-full"
-                onClick={() => modalRef.current.close()}
+                onClick={closeHandler}
               >
                 Close
               </button>
+
             </div>
           </div>
         </dialog>

@@ -2,7 +2,10 @@ import { NavLink, Link, useLocation } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 
-const Navbar = () => {
+
+
+const Navbar = ({cart}) => {
+
   const location = useLocation();
 
   const isProductDetailsPage =
@@ -71,7 +74,12 @@ const Navbar = () => {
             }`}
           >
             <Link to="/Dashboard">
+              <div className="relative">
               <BsCart3 />
+              <div className="absolute -top-4 -right-4 bg-yellow-400 font-semibold text-gray-700 size-5  rounded-full flex  items-center justify-center">
+              {cart.length}
+              </div>
+              </div>
             </Link>
           </div>
           <div
