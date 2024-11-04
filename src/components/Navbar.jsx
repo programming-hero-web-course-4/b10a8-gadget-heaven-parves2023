@@ -70,7 +70,7 @@ const Navbar = () => {
                 : "bg-white text-gray-950"
             }`}
           >
-            <Link>
+            <Link to="/Dashboard">
               <BsCart3 />
             </Link>
           </div>
@@ -81,7 +81,7 @@ const Navbar = () => {
                 : "bg-white text-gray-950"
             }`}
           >
-            <Link>
+            <Link to="/Dashboard">
               <FaRegHeart />
             </Link>
           </div>

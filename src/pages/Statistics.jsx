@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
+import { useLocation } from 'react-router-dom';
+
 import {
   ComposedChart,
   Line,
@@ -12,6 +15,10 @@ import {
 } from 'recharts';
 
 const Statistics = () => {
+  const location = useLocation();
+  const pathnameWithoutSlash = location.pathname.startsWith('/') ? location.pathname.slice(1) : location.pathname;
+
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -30,6 +37,9 @@ const Statistics = () => {
 
   return (
     <div>
+       <Helmet>
+        <title>Gadgets | {pathnameWithoutSlash} </title>
+      </Helmet>
       <div className="mx-auto bg-[#9538E2] space-y-8">
         {/* Header Section */}
         <div className="text-white py-8 text-center rounded-lg">
