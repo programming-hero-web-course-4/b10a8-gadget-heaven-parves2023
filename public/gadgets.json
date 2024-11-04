@@ -20,7 +20,7 @@
         "description": "An Apple smartphone with a powerful chip and high-quality display.",
         "Specification": ["6.1-inch display", "64GB storage", "Dual-lens camera"],
         "availability": true,
-        "rating": 4.6,
+        "rating": 5,
         "other_field": "Face ID"
     },
     {
@@ -32,7 +32,7 @@
         "description": "A powerful laptop designed by Huawei for productivity and multimedia.",
         "Specification": ["16GB RAM", "512GB SSD", "Intel i7 processor"],
         "availability": true,
-        "rating": 4.7,
+        "rating": 4.5,
         "other_field": "Fingerprint sensor"
     },
     {
@@ -44,7 +44,7 @@
         "description": "A sleek, lightweight laptop from Apple with impressive performance.",
         "Specification": ["8GB RAM", "256GB SSD", "M1 chip"],
         "availability": false,
-        "rating": 4.8,
+        "rating": 5,
         "other_field": "Retina display"
     },
     {
@@ -56,7 +56,7 @@
         "description": "High-quality noise-canceling headphones from Sony.",
         "Specification": ["Wireless", "30 hours battery life", "Active noise cancellation"],
         "availability": true,
-        "rating": 4.9,
+        "rating": 4.5,
         "other_field": "Bluetooth 5.0"
     },
     {
@@ -68,7 +68,7 @@
         "description": "A compact, waterproof speaker with excellent sound quality from JBL.",
         "Specification": ["20W output", "12 hours battery life", "Waterproof"],
         "availability": true,
-        "rating": 4.7,
+        "rating": 4,
         "other_field": "PartyBoost compatible"
     },
     {
@@ -80,7 +80,7 @@
         "description": "Feature-rich smartwatch with health tracking by Realme.",
         "Specification": ["Heart rate monitor", "SpO2 monitor", "15 days battery life"],
         "availability": true,
-        "rating": 4.3,
+        "rating": 4.5,
         "other_field": "Multiple watch faces"
     },
     {
@@ -92,7 +92,7 @@
         "description": "A versatile 2-in-1 laptop from Dell, ideal for both work and play.",
         "Specification": ["8GB RAM", "256GB SSD", "Touchscreen"],
         "availability": false,
-        "rating": 4.2,
+        "rating": 4,
         "other_field": "360-degree hinge"
     },
     {
@@ -104,7 +104,7 @@
         "description": "Compact and comfortable wireless earbuds from Apple with noise cancellation.",
         "Specification": ["4.5 hours playtime", "Active Noise Cancellation", "Bluetooth 5.0"],
         "availability": true,
-        "rating": 4.8,
+        "rating": 5,
         "other_field": "Charging case included"
     },
     {
@@ -116,7 +116,7 @@
         "description": "Professional mirrorless DSLR camera for photography and videography from Canon.",
         "Specification": ["45MP sensor", "8K video recording", "Interchangeable lenses"],
         "availability": true,
-        "rating": 5.0,
+        "rating": 5,
         "other_field": "Wi-Fi and Bluetooth connectivity"
     },
     {
@@ -128,7 +128,7 @@
         "description": "A mid-range Samsung smartphone with great performance and camera quality.",
         "Specification": ["6.5-inch display", "128GB storage", "Quad-lens camera"],
         "availability": true,
-        "rating": 4.4,
+        "rating": 4,
         "other_field": "Water-resistant"
     },
     {
@@ -152,7 +152,7 @@
         "description": "Affordable Xiaomi smartphone with a high-quality display and camera.",
         "Specification": ["6.67-inch display", "64GB storage", "Quad-lens camera"],
         "availability": true,
-        "rating": 4.3,
+        "rating": 4,
         "other_field": "AMOLED display"
     },
     {
@@ -164,7 +164,7 @@
         "description": "Google's mid-range phone with excellent camera quality and clean Android experience.",
         "Specification": ["6.34-inch display", "128GB storage", "Dual-lens camera"],
         "availability": true,
-        "rating": 4.6,
+        "rating": 4.5,
         "other_field": "5G enabled"
     }
 ]

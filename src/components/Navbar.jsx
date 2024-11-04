@@ -1,12 +1,14 @@
-import { NavLink,Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 
-
-
 const Navbar = () => {
+  const location = useLocation();
 
-  
+  // Check if the current route is a product details page
+  const isProductDetailsPage =
+    location.pathname.startsWith("/product-details/");
+
   const links = (
     <>
       <li>
@@ -23,7 +25,13 @@ const Navbar = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="navbar bg-[#9538E2] text-white rounded-t-xl">
+      <div
+        className={`navbar ${
+          isProductDetailsPage
+            ? "bg-white text-black rounded-xl"
+            : "bg-[#9538E2] text-white"
+        } rounded-t-xl`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -54,14 +62,30 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end gap-4">
-          <div className="bg-white rounded-full text-gray-950 size-8 flex justify-center items-center">
-          <Link ><BsCart3  /></Link>
+
+        <div className="navbar-end gap-4 mr-2">
+          <div
+            className={`rounded-full size-8 flex justify-center items-center border ${
+              isProductDetailsPage
+                ? "bg-gray-200 text-black"
+                : "bg-white text-gray-950"
+            }`}
+          >
+            <Link>
+              <BsCart3 />
+            </Link>
           </div>
-          <div className="bg-white rounded-full text-gray-950 size-8 flex justify-center items-center">
-          <Link ><FaRegHeart /></Link>
+          <div
+            className={`rounded-full size-8 flex justify-center items-center border ${
+              isProductDetailsPage
+                ? "bg-gray-200 text-black"
+                : "bg-white text-gray-950"
+            }`}
+          >
+            <Link>
+              <FaRegHeart />
+            </Link>
           </div>
-          
         </div>
       </div>
     </div>

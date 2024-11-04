@@ -30,7 +30,7 @@ function Cards() {
     : products.filter(product => product.category === selectedCategory);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 container mx-auto">
       <h1 className="text-3xl font-bold text-center">
         Explore Cutting-Edge Gadgets
       </h1>

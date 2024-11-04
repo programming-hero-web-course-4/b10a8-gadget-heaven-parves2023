@@ -6,7 +6,7 @@ function Hero() {
       <div className="hero">
         <div className="hero-content text-center">
           <div className="mt-10 mb-44">
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-5xl w-10/12 mx-auto font-bold">
               Upgrade Your Tech Accessorize with Gadget Heaven Accessories
             </h1>
             <p className="py-6 w-8/12 mx-auto">
@@ -21,8 +21,8 @@ function Hero() {
         </div>
       </div>
       {/* meta glass */}
-      <div className="absolute w-9/12 bg-white bg-opacity-50 border-2 border-stone-100 rounded-2xl p-4 left-1/2 transform -translate-x-1/2 -bottom-80">
-        <img className="rounded-2xl h-[27rem] object-cover w-full" src={bannerImg} alt="bannerImg" />
+      <div className="absolute w-9/12 bg-white bg-opacity-50 border-2 border-stone-100 rounded-2xl p-4 left-1/2 transform -translate-x-1/2 -bottom-[27rem]">
+        <img className="rounded-2xl h-[35rem] object-cover w-full" src={bannerImg} alt="bannerImg" />
       </div>
     </div>
   );
