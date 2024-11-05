@@ -48,7 +48,7 @@ function Dashboard() {
   
 
   const sortByPrice = () => {
-    const sorted = [...sortedCart].sort((a, b) => a.price - b.price);
+    const sorted = [...sortedCart].sort((a, b) => b.price - a.price);
     setSortedCart(sorted);
   };
 

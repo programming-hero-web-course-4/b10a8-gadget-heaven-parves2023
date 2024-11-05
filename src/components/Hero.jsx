@@ -15,7 +15,7 @@ function Hero() {
               it all!
             </p>
             <button className="btn rounded-3xl px-7 py-1 text-[#9538E2]">
-              Shop Now
+              <a href="#products">Shop Now</a>
             </button>
           </div>
         </div>

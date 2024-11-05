@@ -4,6 +4,7 @@
 
 html {
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap');
@@ -16,11 +17,5 @@ body {
 #root {
   margin: 0 auto;
 }
-/* 
-.active{
-  font-weight: 800;
-  background-color: transparent !important;
-  text-decoration: underline;
-  color: rgb(162, 162, 162) !important;
-} */
+
 

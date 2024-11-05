@@ -1,3 +1,8 @@
+import { Helmet } from "react-helmet";
+
+
+
+
 const FAQPage = () => {
     const faqs = [
         {
@@ -28,6 +33,9 @@ const FAQPage = () => {
 
     return (
         <div>
+            <Helmet>
+        <title>Gadgets | FAQ </title>
+      </Helmet>
 
 <div className="mx-auto bg-[#9538E2] space-y-8">
         {/* Header Section */}

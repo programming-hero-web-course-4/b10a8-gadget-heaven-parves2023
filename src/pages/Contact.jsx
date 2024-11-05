@@ -1,7 +1,11 @@
-import React from 'react';
+import { Helmet } from "react-helmet";
 
 const Contact = () => (
   <div>
+    <Helmet>
+        <title>Gadgets | Contact </title>
+      </Helmet>
+
     <div className="text-white py-8 text-center rounded-lg bg-[#9538E2]">
             <h1 className="text-3xl font-bold text-center mb-8 text-white">Contact With Us</h1>
           <p className="mt-2 text-lg font-bold text-center mb-8 text-white">
